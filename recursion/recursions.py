@@ -44,3 +44,37 @@ class recursion:
             return 1 
         else: 
             return number * recursion.power(number,power - 1)
+        
+    @staticmethod
+    def computeMin(nums, i: int, min: int):
+        """Finds the minimum number is a specified list of numbers.
+
+        Args:
+            nums: specified list
+
+        Returns:
+            int: minimum number
+        """
+        if (i == len(nums)):
+            return min 
+        else:
+            if (nums[i] <= min):
+                min = nums[i]
+            return recursion.computeMin(nums,i + 1,min)
+           
+    @staticmethod
+    def reverse(s:str, i: int):
+        """Displays a specified string in reverse. 
+
+        Args:
+            s (str): specified string
+        """        
+        if (i == 0):
+            print("is the reverse of %s using a recursion"%(s))
+        else:
+            print(s[i-1],end=" ")
+            recursion.reverse(s,i-1)
+
+        
+
+        
