@@ -26,3 +26,26 @@ print("Minimum number using a recursion is: ", recursion.computeMin(nums,0,nums[
 word = "TAC"
 loops.reverse(word)
 recursion.reverse(word,len(word))
+
+print("Loop")
+a = [-7,42,70,39,3,63,8]
+
+# Prompt the user for the index at which the search will begin 
+first = 0
+
+    # Prompt the user for the number of elements to search 
+size = 10
+
+    # Prompt the user for the target
+target = 39
+
+# Call search and display its return
+print("Target found at index....",loops.search(a,first,size,target))
+
+
+print("Recursion")
+# Call search and display its return
+if (recursion.search(a,first,size,target,0,False)== -1):
+    print(f"{target} not found")
+else:
+    print("Target found at index....",recursion.search(a,first,size,target,0,False))
